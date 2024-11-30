@@ -23,17 +23,12 @@ class StoreItemRequest extends FormRequest
      *
      * @return array<string, mixed>
      */
+
     public function rules()
     {
         return [
-
-            'name' => [
-                'required',
-            ],
-            'description ' => [
-                'required',
-            ],
-
+            'name' => 'required',
+            'description' => 'required'
         ];
     }
 }
