@@ -10,7 +10,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|unique'
+            'title' => ['required', 'unique:posts,title']
         ]);
 
         // Saving the post
